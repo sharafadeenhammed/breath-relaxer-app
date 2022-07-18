@@ -1,0 +1,105 @@
+*{
+    padding: 0px;
+    margin:0px;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background: linear-gradient(50deg, rgba(214, 64, 64, 0.8), rgba(69, 135, 69, 0.8), rgba(59, 59, 164, 0.8));
+    /* background: linear-gradient(45deg, red, green, blue); */
+    height:100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    color:rgb(194, 220, 194);
+}
+header{
+    text-align: center;
+}
+
+.container{
+    position: relative;
+    /* box-shadow: 1px 1px 4px black, 1px -1px 4px black; */
+    border-radius: 50%;
+}
+
+.ball-shaft{
+    position:absolute;
+    left: 130px;
+    top: 0px;
+    bottom:0px;
+    height:300px;
+    width:40px;
+    /* background-color: aliceblue; */
+    z-index: 100;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    animation-name:pointer;
+    animation-duration: 7500ms;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+.ball{
+    position:absolute;
+    top:-20px;
+    height:15px;
+    width:15px;
+    border-radius:50%;
+    background-color: azure;
+}
+
+.outer-ring{
+    display:flex;
+    height:300px;
+    width:300px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 1px 3px black;
+    background: conic-gradient( green 0% 46%, rgb(168, 168, 227) 50% 65%, orange 69% 90%);
+}
+
+.inner-ring{
+    color:aquamarine;
+    z-index: 5;
+    height:98%;
+    width:98%;
+    border-radius: 50%;
+    background-color: aliceblue;
+    display: flex;
+    background-color: rgb(70, 61, 61);
+    align-items: center;
+    justify-content: center;
+
+}
+.text{
+    color:antiquewhite;
+    font-weight:bolder;
+    
+}
+.grow{
+    transition: 3.5s linear;
+    transform:scale(1.1)
+
+}
+
+.shrink{
+    transition: 2.5s linear;
+    transform:scale(1)
+}
+
+@keyframes pointer{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
